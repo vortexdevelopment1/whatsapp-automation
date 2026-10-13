@@ -24,7 +24,7 @@ import {
   QualificationDecisionResponse,
 } from "@/types";
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL;
 
 async function fetchJson<T>(endpoint: string, options?: RequestInit): Promise<T> {
   const url = `${API_BASE_URL}${endpoint}`;
@@ -694,8 +694,7 @@ export const api = {
     formData.append("source_id", sourceId);
     formData.append("file", file);
 
-    const baseUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
-    const res = await fetch(`${baseUrl}/api/property-imports/upload`, {
+    const res = await fetch(`${API_BASE_URL}/api/property-imports/upload`, {
       method: "POST",
       headers: {
         "X-Admin-Id": "operator-ui",
