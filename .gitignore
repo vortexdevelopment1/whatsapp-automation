@@ -1,0 +1,54 @@
+# ── Python / Backend ──────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.whl
+
+# Virtual environment
+backend/venv/
+venv/
+env/
+.venv/
+
+# Pytest
+.pytest_cache/
+.coverage
+htmlcov/
+*.log
+
+# Alembic – keep migrations, ignore compiled cache
+backend/alembic/__pycache__/
+
+# Uploads / local storage
+backend/uploads/
+
+# ── Node / Frontend ────────────────────────────────────────────────────────────
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/.turbo/
+frontend/tsconfig.tsbuildinfo
+
+# ── Environment files ─────────────────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+# keep .env.example
+!.env.example
+
+# ── IDE / OS ──────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.DS_Store
+Thumbs.db
+
+# ── Misc ──────────────────────────────────────────────────────────────────────
+*.bak
+*.swp
+*.tmp
